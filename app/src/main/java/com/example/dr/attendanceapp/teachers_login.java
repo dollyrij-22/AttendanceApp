@@ -1,8 +1,5 @@
 package com.example.dr.attendanceapp;
 
-/**
- * Created by DR on 3/20/2017.
- */
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,9 +18,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by DR on 1/3/2017.
- */
 public class teachers_login extends AppCompatActivity {
     EditText username,password;
     String Username,Password;
@@ -109,7 +103,7 @@ public class teachers_login extends AppCompatActivity {
                 err = "Exception: " + e.getMessage();
             }
 
-            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), NavigationDrawer.class);
             i.putExtra("name", NAME);
             i.putExtra("username", USERNAME);
             i.putExtra("password", PASSWORD);
