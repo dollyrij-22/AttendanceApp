@@ -1,12 +1,11 @@
 <?php
 
 	if($_SERVER['REQUEST_METHOD']=='POST'){
-		
+	    session_start();	
 		$image = $_POST['image'];
-		
-		require_once('init.php');
-		
-		$sql ="SELECT id FROM picture ORDER BY id ASC";
+		$username = $_SESSION["username"];
+		require_once('init.php');	
+		$sql ="SELECT username FROM teachers_login WHERE username = '$username'";
 		
 		$res = mysqli_query($con,$sql);
 		
@@ -16,7 +15,7 @@
 				$id = $row['id'];
 		}
 		
-		$path = "$id.png";
+		$path = "$username.png";
 		
 		$actualpath = "http://attendance-dr22libraryapp.rhcloud.com/$path";
 		
@@ -28,7 +27,9 @@
 		}
 		
 		mysqli_close($con);
-	}else{
+	}
+	else
+	{
 		echo "Error";
 	}
 	?>
