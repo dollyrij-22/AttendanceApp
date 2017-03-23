@@ -8,12 +8,7 @@
 		$sql ="SELECT username FROM teachers_login WHERE username = '$username'";
 		
 		$res = mysqli_query($con,$sql);
-		
-		$id = 0;
-		
-		while($row = mysqli_fetch_array($res)){
-				$id = $row['id'];
-		}
+				
 		
 		$path = "$username.png";
 		

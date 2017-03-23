@@ -44,16 +44,14 @@ public class Home extends Fragment implements View.OnClickListener {
                 }
             });
         }
-
         else
         {
             getActivity().finish();
             Toast.makeText(getActivity().getApplicationContext(), "Incorrect Username or password !!!\n or Check your Internet connection", Toast.LENGTH_LONG).show();
-
         }
         return view;
     }
-
+    
     @Override
     public void onClick(View v) {
 
