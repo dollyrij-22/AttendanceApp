@@ -5,7 +5,7 @@
 		$image = $_POST['image'];
 		$username = $_SESSION["username"];
 		require_once('init.php');	
-		$sql ="SELECT username FROM teachers_login WHERE username = '$username'";
+		$sql ="SELECT name FROM teachers_login WHERE username = '$username'";
 		
 		$res = mysqli_query($con,$sql);
 				

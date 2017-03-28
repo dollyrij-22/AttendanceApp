@@ -34,6 +34,7 @@ public class Home extends Fragment implements View.OnClickListener {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), MainActivity.class);
+                    intent.putExtra("username",username);
                     getActivity().startActivity(intent);
                 }
             });
@@ -51,7 +52,7 @@ public class Home extends Fragment implements View.OnClickListener {
         }
         return view;
     }
-    
+
     @Override
     public void onClick(View v) {
 
