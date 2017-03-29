@@ -14,7 +14,7 @@
 		
 		$actualpath = "http://attendance-dr22libraryapp.rhcloud.com/$path";
 		
-		$sql = "INSERT INTO picture (image) VALUES ('$actualpath')";
+		$sql = "INSERT INTO picture (image,date,time) VALUES ('$actualpath',NOW(),NOW())";
 		
 		if(mysqli_query($con,$sql)){
 			file_put_contents($path,base64_decode($image));
